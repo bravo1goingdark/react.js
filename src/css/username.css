@@ -1,0 +1,8 @@
+/* applying to particular tag using className property */
+
+.username {
+    font-style: italic;
+    font-size: large;
+    font-display: initial;
+    color: burlywood;
+}
