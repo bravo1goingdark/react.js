@@ -10,5 +10,5 @@ export function UserFavouriteFood () {
                 <li>Chinese Noodles</li>
             </ol>
         </div>
-    )
+    );
 }
