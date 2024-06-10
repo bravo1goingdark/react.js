@@ -1,0 +1,13 @@
+.email {
+    color: cornsilk;
+    font-size: large;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: italic;
+}
+
+.food {
+    color: beige;
+    font-size: medium;
+    font-weight: bold;
+    font-style: oblique;
+}

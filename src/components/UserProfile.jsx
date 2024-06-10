@@ -1,7 +1,7 @@
 import { UserFavouriteFood } from "./UserFavouriteFood";
 import { UserUsername } from "./UserUsername";
 import PropTypes from 'prop-types';
-
+import styles from '../css/email.module.css'
 
 
 
@@ -12,7 +12,7 @@ export function UserProfile (props) {
             <UserUsername username = {props.username}/>
             <div>
                 <b>Email:</b>
-                <span>{props.email} </span>
+                <span className={styles.email}>{props.email} </span>
                 <br />
                 <b>Age:</b>
                 <span>{props.age}</span>
@@ -20,7 +20,7 @@ export function UserProfile (props) {
             {/* <p>{props.callme()}</p>  */}
 
             <section>
-                <span>Favourite Foods:</span>
+                <span className={styles.food}>Favourite Foods:</span>
                 <br />
                 <ul>
                     <li>Pizza</li>

@@ -1,5 +1,7 @@
 import { UserProfile } from "./components/UserProfile";
 
+import { UserDetail } from "./components/dynamicRendring";
+
 export default function App () {
     const callme = () => {
         return alert("Hello World");
@@ -16,6 +18,8 @@ export default function App () {
                isMarried = {true}
                favFood = {[{name : "Pizaa",id : 1234},{name : "shushi",id : 6498}]}
             />
+
+            <UserDetail />
         </div>
     );
 }
