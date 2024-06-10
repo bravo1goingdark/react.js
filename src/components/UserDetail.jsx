@@ -8,7 +8,6 @@ export const User = ({user}) => {
             <span>User Email : {user.email}</span> <br />
             <br />
         </>
-
     );
 }
 

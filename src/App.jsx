@@ -1,4 +1,5 @@
 import { UserProfile } from "./components/UserProfile";
+import { Render } from "./components/condRendering";
 
 import { UserDetail } from "./components/dynamicRendring";
 
@@ -9,6 +10,7 @@ export default function App () {
     return (
         <div>
             <h1>Root Component</h1>
+            <Render />
             {/* Passing email as props */}
             <UserProfile 
                username = "Ashutosh" 
