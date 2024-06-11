@@ -1,5 +1,5 @@
 export const Render = () => {
-    const isAuthenticated = true;
+    // const isAuthenticated = true;
     // "VERIFIED" , "NOT_VERIFIED" , "ACCOUNT_DISABLED"
     const USER_STATUS = null;
 

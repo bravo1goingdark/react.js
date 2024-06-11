@@ -1,7 +1,9 @@
+import { LoginForm } from "./components/LoginForm";
 import { UserProfile } from "./components/UserProfile";
 import { Render } from "./components/condRendering";
 
 import { UserDetail } from "./components/dynamicRendring";
+import { RegisterForm } from "./components/state";
 
 export default function App () {
     const callme = () => {
@@ -10,6 +12,8 @@ export default function App () {
     return (
         <div>
             <h1>Root Component</h1>
+            {/* <LoginForm /> */}
+            <RegisterForm />
             <Render />
             {/* Passing email as props */}
             <UserProfile 
