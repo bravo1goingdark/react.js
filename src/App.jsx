@@ -1,5 +1,6 @@
-import { LoginForm } from "./components/LoginForm";
+import { Form } from "./components/Form";
 import { UserProfile } from "./components/UserProfile";
+import { UserState } from "./components/UserState";
 import { Render } from "./components/condRendering";
 
 import { UserDetail } from "./components/dynamicRendring";
@@ -13,6 +14,7 @@ export default function App () {
         <div>
             <h1>Root Component</h1>
             {/* <LoginForm /> */}
+            <UserState />
             <RegisterForm />
             <Render />
             {/* Passing email as props */}
@@ -25,7 +27,7 @@ export default function App () {
                favFood = {[{name : "Pizaa",id : 1234},{name : "shushi",id : 6498}]}
             />
 
-            <UserDetail />
+            {/* <UserDetail /> */}
         </div>
     );
 }

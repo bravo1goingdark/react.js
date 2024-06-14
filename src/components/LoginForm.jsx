@@ -22,6 +22,7 @@ export const LoginForm = () => {
             <input onChange={(e) => {
                 console.log(e.target.value);
             }} type= "password" name="password" id="password" /> <br />
+                       
             <button onClick={() => {
                 console.log("submited")
             }}> Login</button>
