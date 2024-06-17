@@ -4,7 +4,8 @@ import { useState } from "react";
 export const RegisterForm = () => {
     // usestate returns an array which contains value and a setter function
     // it accept an initial state for the value
-    // its setter function is officialy calleed as dispatcher function
+    // its setter function is officialy called as dispatcher function
+
     // const [username , setUsername] = useState("");
     // const [password , setPassword] = useState("");
     // const [displayname , setDisplayName] = useState("");
@@ -25,7 +26,7 @@ export const RegisterForm = () => {
             <label htmlFor="username">Username : </label><br />
             {/* instead of directly passing the value as username we can pass in the object.fieldName */}
             <input onChange={(e) => 
-                setFormFields((prevState) => ({...prevState ,username : e.target.value }))} 
+                setFormFields(prevState => ( {...prevState ,username : e.target.value }))} 
                 id="Username" value={formFields.username} />
             <span>{formFields.username}</span>
             <br />

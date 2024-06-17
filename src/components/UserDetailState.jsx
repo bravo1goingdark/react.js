@@ -10,7 +10,8 @@ export const UserDetailState = ({user , setUsers}) => {
     return (
         <>  
             <div>
-                <button onClick={() =>setIsEditing((currstate) => !currstate) }>Edit</button>
+                {/* deleting a user */}
+                <button onClick={() => setIsEditing((currstate) => !currstate) }>Edit</button>
 
                 <button onClick={() => {
                     setUsers((currenUserState) => {
@@ -18,7 +19,9 @@ export const UserDetailState = ({user , setUsers}) => {
                     });
                 }
                 }>Delete</button> 
-
+ 
+                
+                {/* save the editing user */}
                 {isEditing && <><button onClick={() => {
                     setUsers((currenUserState) => {
                         return currenUserState.map((currenUser) => {
@@ -33,7 +36,7 @@ export const UserDetailState = ({user , setUsers}) => {
             </div>
             <span>User Id :{user.id} </span> <br />
 
-            
+            {/* editing the username  */}
             <span>Username :{isEditing ? <input 
                 name="username" 
                 id="username" 
@@ -42,7 +45,7 @@ export const UserDetailState = ({user , setUsers}) => {
             /> : user.username} </span> <br />
 
 
-
+            {/* editing the email field */}
             <span>User Email : {isEditing ? <input 
                 name="email" 
                 id="email" 

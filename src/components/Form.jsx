@@ -1,10 +1,11 @@
 import { useState } from "react";
+import PropTypes from 'prop-types';
 
 export const Form = ({setUser}) => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [counter, setCounter] = useState(3);
-
+  //  adding user
   return (
     <div>
       <form onSubmit={(e) => {
@@ -18,6 +19,7 @@ export const Form = ({setUser}) => {
         setUser((currUserState) => [...currUserState , newUser]);
         
       }}>
+        
         <label htmlFor="username">Username:</label>
         <input
           type="text"
@@ -25,6 +27,7 @@ export const Form = ({setUser}) => {
           onChange={(e) => setUsername(e.target.value)}
         />
         <br />
+
         <label htmlFor="email">Email:</label>
         <input
           type="text"
@@ -37,3 +40,7 @@ export const Form = ({setUser}) => {
     </div>
   );
 };
+
+Form.propTypes = {
+    setUser : PropTypes.func.isRequired
+}
