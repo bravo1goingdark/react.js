@@ -5,6 +5,7 @@ import { Render } from "./components/condRendering";
 
 import { UserDetail } from "./components/dynamicRendring";
 import { RegisterForm } from "./components/state";
+import { FormUseEffect } from "./components/useEffect";
 
 export default function App () {
     const callme = () => {
@@ -13,19 +14,20 @@ export default function App () {
     return (
         <div>
             <h1>Root Component</h1>
+            <FormUseEffect />
             {/* <LoginForm /> */}
-            <UserState />
+            {/* <UserState />
             <RegisterForm />
-            <Render />
+            <Render /> */}
             {/* Passing email as props */}
-            <UserProfile 
+            {/* <UserProfile 
                username = "Ashutosh" 
                age = {20} 
                email = "ak0704176@gmail.com"
                callme = {callme}
                isMarried = {true}
                favFood = {[{name : "Pizaa",id : 1234},{name : "shushi",id : 6498}]}
-            />
+            /> */}
 
             {/* <UserDetail /> */}
         </div>
