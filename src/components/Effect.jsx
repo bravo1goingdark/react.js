@@ -14,26 +14,36 @@ export const EffectPost = ({userId , title , body}) => {
 export const UploadForm = () => {
     const [form , setForm] = useState({
         userId : 1,
-        title : "title",
-        body : "body"
+        title : "",
+        body : ""
     })
+    const isDisabled = !form.body || !form.title;
+
     return(
 
         <form onSubmit={(e) => {
             e.preventDefault();
             const postData = async () => {
-                const promisedData = await fetch("https://jsonplaceholder.typicode.com/posts" , {
-                    method : "POST",
-                    body: JSON.stringify(form),
-                    headers : {
-                        "Content-Type" : "application/json"
+                if (form.title && form.body) {
+                    const promisedData = await fetch("https://jsonplaceholder.typicode.com/posts" , {
+                        method : "POST",
+                        
+                        body: JSON.stringify({ // or we could directly pass form state variable
+                            userId : 2,
+                            title : form.title,
+                            body : form.body
+                        }),
+                        headers : {
+                            "Content-Type" : "application/json"
+                        }
+                    });
+                    if(!promisedData.ok){
+                        return console.log("not posted")
                     }
-                });
-                if(!promisedData.ok){
-                    return console.log("not posted")
+                    console.log(promisedData.status);
+                }else {
+                    console.log("not posted");
                 }
-                console.log((await promisedData).status)
-                console.log("posted successfully");
             }
             postData();
         }}>
@@ -44,7 +54,7 @@ export const UploadForm = () => {
             <label htmlFor="body">body :</label>
             <input type="text" value= {form.body} name="body" id="body" onChange={(e) => setForm((data) => ({...data , body : e.target.value}))} />
             <br />
-            <button>submit</button>
+            <button type="submit" disabled = {isDisabled}>submit</button>
 
         </form>
     );

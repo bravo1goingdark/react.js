@@ -5,9 +5,11 @@ export const LoginForm = () => {
     return(
         <form onSubmit={(e) => {
             e.preventDefault(); // prevent browser default behaviour
+            
             // we cannot directly manipulating dom element beacause it goes againt the react core principal
             // const username = document.getElementById("username");
             // const password = document.getElementById("password");
+
             const username = new FormData(e.target);
             const password = new FormData(e.target);
             console.log(`Username : ${username.get("username")} Password : ${password.get("password")}`)
