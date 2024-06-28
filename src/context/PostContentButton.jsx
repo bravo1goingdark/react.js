@@ -3,9 +3,12 @@ import { UserContext } from "../utils/contexts/UserContext"
 
 
 
-export const PostContentButton = ({data}) => {
-    const userContextData = useContext(UserContext);
+export const PostContentButton = () => {
+    const {displayName,setUserData} = useContext(UserContext);
     return <div>
-        {userContextData.displayName}
+        {displayName}
+        <button onClick={() => {
+            setUserData((data) => ({...data , displayName:"hans landa"}))
+        }}>Update displayName</button>
     </div>
 }

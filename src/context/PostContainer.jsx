@@ -6,7 +6,8 @@ export const PostContainer = () => {
     const [data,setData] = useState("hello world");
 
     // consuming the context data
-    const {username , setUserData} = useContext(UserContext);
+    // can destructure all fiels of context data
+    const {username, setUserData} = useContext(UserContext);
 
     
   return (
@@ -16,6 +17,7 @@ export const PostContainer = () => {
 
     <button onClick={() => {
         setUserData((data) => ({...data , username : "ashutosh kumar"}))
-    }}>Click Me</button>
+    }}>Update</button>
+
   </div>);
 };
