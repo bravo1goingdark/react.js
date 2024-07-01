@@ -5,6 +5,6 @@ export const UserContext = createContext({
     id : 0,
     username : "default",
     email : "default@gmail.com",
-    displayName : "hello",
+    name : "hello",
     setUserData : () => {}
 });
