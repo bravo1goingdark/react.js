@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 export const useFetchUser = (id) => {
   const [userData, setUserData] = useState({});
   const [loading, setLoading] = useState(false);
-  const [err, setError] = useState();
+  const [error, setError] = useState();
 
   useEffect(() => {
     const controller = new AbortController();
@@ -25,5 +25,5 @@ export const useFetchUser = (id) => {
     };
   }, [id]);
 
-  return { fetchedUser: userData, loading, err };
+  return { fetchedUser: userData, loading, error };
 };
